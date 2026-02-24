@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/HackClub-Binus-School-Semarang/Idle-Game-Project/main/images/Ages%20Idle%20Poster.png" alt="Ages Idle Poster" width="700">
+</p>
+
 # AGES IDLE: EVOLUTION ENGINE
 
 A data-driven incremental game engine built with vanilla JavaScript. The system features a multi-age progression loop, achievement-based multipliers, and a Big Bang prestige mechanic.
