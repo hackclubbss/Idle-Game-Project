@@ -1,6 +1,6 @@
 "use strict";
 
-/* ================= GAME DATA (LOADED FROM JSON) ================= */
+/* Game Data (Loaded from JSON) */
 let AGES = [];
 let MILESTONES = [];
 
@@ -23,7 +23,7 @@ async function loadGameData() {
   }
 }
 
-/* ================= GAME STATE (SAVE DATA) ================= */
+/* Game State (Save Data) */
 let state = {
   ageIndex: 0,
   currency: 0,
@@ -34,7 +34,7 @@ let state = {
   perSecond: 0
 };
 
-/* ================= UI ELEMENTS ================= */
+/* UI Elements */
 const els = {
   welcome: document.getElementById("welcome-screen"),
   game: document.getElementById("game-screen"),
@@ -51,7 +51,7 @@ const els = {
   bigBang: document.getElementById("big-bang-btn")
 };
 
-/* ================= CORE UTILITIES ================= */
+/* Utilities */
 function formatNumber(num) {
   if (num === 0) return "0";
   if (num < 1000) return Math.floor(num).toString();
@@ -63,7 +63,7 @@ function formatNumber(num) {
   return scaled.toFixed(2).replace(/\.00$/, "") + suffixes[tier];
 }
 
-/* ================= ENGINE LOGIC ================= */
+/* Core Engine Logic */
 function calculateIncome() {
   let base = 0;
 
@@ -106,7 +106,7 @@ function getPendingShards() {
   return Math.max(0, potential - state.shards);
 }
 
-/* ================= VIEW RENDERING ================= */
+/* Rendering */
 function renderChronicle() {
   if (!els.milestones) return;
 
@@ -201,7 +201,7 @@ function applyAgeState() {
   renderChronicle();
 }
 
-/* ================= PLAYER ACTIONS ================= */
+/* Player Actions */
 function buyUpgrade(upg, cost) {
   if (state.currency < cost) return;
 
@@ -249,7 +249,7 @@ function bigBang() {
   saveGame();
 }
 
-/* ================= SYSTEM: PERSISTENCE ================= */
+/* System Persistence */
 function saveGame() {
   localStorage.setItem("agesIdleSave", JSON.stringify(state));
 }
@@ -266,7 +266,7 @@ function loadGame() {
   }
 }
 
-/* ================= INITIALIZATION & LOOPS ================= */
+/* Initialization and Loops */
 els.start.onclick = () => {
   els.welcome.hidden = true;
   els.game.hidden = false;
@@ -288,7 +288,7 @@ setInterval(() => {
 // Auto-save
 setInterval(saveGame, 30000);
 
-/* ================= BOOTSTRAP ================= */
+/* Bootstrap */
 async function bootstrap() {
   await loadGameData();
   loadGame();
@@ -299,3 +299,4 @@ async function bootstrap() {
 }
 
 bootstrap();
+
