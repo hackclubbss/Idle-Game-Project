@@ -1,4 +1,4 @@
-/* ================= VARIABLES & THEMES ================= */
+/* VARIABLES & THEMES */
 :root {
   /* Default (Stone Age) Colors */
   --bg-color: #5c4e3c;
@@ -8,7 +8,7 @@
   --btn-primary: #e67e22;
   --btn-shadow: #a04000;
   --display-bg: #3e3832;
-  --display-text: #a8d5ba; /* Old LCD greenish tint */
+  --display-text: #a8d5ba;
 }
 
 /* MEDIEVAL THEME OVERRIDE */
@@ -17,7 +17,7 @@ body.bg-medieval {
   --panel-bg: #95a5a6;
   --text-color: #1a1a1a;
   --accent-color: #7f8c8d;
-  --btn-primary: #f1c40f; /* Gold */
+  --btn-primary: #f1c40f;
   --btn-shadow: #b7950b;
   --display-bg: #000000;
   --display-text: #f1c40f;
@@ -27,9 +27,9 @@ body.bg-medieval {
 body.bg-future {
   --bg-color: #050510;
   --panel-bg: #111122;
-  --text-color: #00ffcc; /* Cyan Neon */
+  --text-color: #00ffcc;
   --accent-color: #3333aa;
-  --btn-primary: #ff00ff; /* Hot Pink */
+  --btn-primary: #ff00ff;
   --btn-shadow: #990099;
   --display-bg: #000000;
   --display-text: #00ffcc;
@@ -40,7 +40,7 @@ body.bg-future {
   background-size: 40px 40px;
 }
 
-/* ================= BASE STYLES ================= */
+/* BASE STYLES */
 * {
   box-sizing: border-box;
   image-rendering: pixelated; /* Keeps everything crisp */
@@ -58,7 +58,7 @@ body {
   transition: background-color 0.5s step-end; /* "step-end" makes it snap instead of fade */
 }
 
-/* ================= THE GAME BOY / PANEL CARD ================= */
+/* THE GAME BOY / PANEL CARD */
 .panel {
   width: 100%;
   max-width: 380px;
@@ -87,7 +87,7 @@ body {
   margin-bottom: 2rem;
 }
 
-/* ================= THE RESOURCE DISPLAY (LCD SCREEN) ================= */
+/* THE RESOURCE DISPLAY (LCD SCREEN) */
 .currency-display {
   position: relative;
   background: var(--display-bg);
@@ -131,7 +131,7 @@ body {
   letter-spacing: 2px;
 }
 
-/* ================= PIXEL BUTTONS ================= */
+/* PIXEL BUTTONS */
 .actions {
   display: flex;
   flex-direction: column;
@@ -171,27 +171,23 @@ body {
 .pixel-btn.secondary {
   background: #444;
   color: #fff;
-  border: 4px dashed #fff; /* Dashed border looks cool/retro */
+  border: 4px dashed #fff;
 }
 
-/* HOVER EFFECTS */
 .pixel-btn:hover {
   transform: translateY(-2px);
 }
 
-/* CLICK EFFECTS (The "Press" feel) */
 .pixel-btn:active {
   transform: translateY(2px);
   box-shadow: inset 4px 4px 0px 0px rgba(0,0,0,0.2);
 }
 
-/* ICONS */
 .px {
-  font-size: 1.2rem; /* Scales the pixel icons */
+  font-size: 1.2rem;
 }
 
 /* FUTURE THEME EXTRAS */
-/* When in future mode, give the screen a glow */
 body.bg-future .currency-display {
   box-shadow: 0 0 15px var(--display-text), inset 0 0 10px rgba(0,0,0,0.8);
   text-shadow: 0 0 5px var(--display-text);
@@ -266,7 +262,7 @@ body.bg-future .currency-display {
 }
 
 .shop-container {
-  max-height: 300px; /* Optional: adds a scrollbar if you have many upgrades */
+  max-height: 300px;
   overflow-y: auto;
   padding-right: 5px;
 }
@@ -281,15 +277,15 @@ body.bg-future .currency-display {
 }
 
 .bg-classical {
-  --bg-color: #87CEEB; /* Sky blue */
-  --panel-bg: #F5F5DC; /* Beige marble */
+  --bg-color: #87CEEB;
+  --panel-bg: #F5F5DC;
   --text-color: #2F4F4F;
   --display-text: #4682B4;
 }
 
 .bg-industrial {
-  --bg-color: #4b3621; /* Dark brick */
-  --panel-bg: #708090; /* Steel gray */
+  --bg-color: #4b3621;
+  --panel-bg: #708090;
   --text-color: #2c2c2c;
-  --display-text: #ff4500; /* Glowing coal */
+  --display-text: #ff4500;
 }
