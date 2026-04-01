@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/HackClub-Binus-School-Semarang/Idle-Game-Project/main/images/Ages%20Idle%20Poster.png" alt="Ages Idle Poster" width="700">
+  <img src="images/Ages%20Idle%20Poster.png" alt="Ages Idle Poster" width="700">
 </p>
 
 # AGES IDLE: EVOLUTION ENGINE
@@ -8,7 +8,7 @@ A data-driven incremental game engine built with vanilla JavaScript. The system 
 
 ## Demo
 
-Check out this site live at: [GitHub Pages](https://hackclub-binus-school-semarang.github.io/Idle-Game-Project/) or [Play on itch.io](https://rainier-ps.itch.io/ages-idle-evolution-engine)!
+Check out this site live at: [GitHub Pages](https://hackclubbss.github.io/Idle-Game-Project) or [Play on itch.io](https://hackclubbss.github.io/Idle-Game-Project)!
 
 
 ## 1. CORE ARCHITECTURE
